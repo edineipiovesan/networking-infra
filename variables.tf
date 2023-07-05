@@ -16,6 +16,20 @@ variable "vpc_name" {
 }
 
 ############
+### EKS  ###
+############
+variable "enable_eks_tags" {
+  type        = bool
+  description = "Add subnet tags used by EKS"
+}
+
+variable "eks_cluster_name" {
+  type        = string
+  description = "EKS cluster name (required only when enable_eks_tags is true)"
+  default     = ""
+}
+
+############
 ### TAGS ###
 ############
 variable "default_tags" {
